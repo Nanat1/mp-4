@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import {useState} from "react";
 
 function Home() {
-    const [pageNo, setPageNo] = useState(1);
+    const pageNo = 1;
 
     return (
         <main id="main-wrapper">
