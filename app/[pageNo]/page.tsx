@@ -4,7 +4,7 @@ export default async function JobListPage({params}: {params: {pageNo: string}}) 
     const pageNo = decodeURIComponent(params.pageNo);
 
     return(
-            <main>
+            <main id="main-wrapper">
                 <JobList pageNo={pageNo} />
             </main>
     )

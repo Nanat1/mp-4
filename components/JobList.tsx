@@ -32,19 +32,27 @@ export default async function JobList({pageNo}: { pageNo: string }) {
 
     return (
         <main>
-            <div>
-                {data.previous === null ?
-                    <p>(No previous page)</p>
-                    :
-                    <Link href={`/${Number(pageNo) - 1}`}>Previous</Link>
-                }
-                {data.next === null ?
-                    <p>(No following page)</p>
-                    :
-                    <Link href={`/${Number(pageNo) + 1}`}>Next</Link>
-                }
-                <JobSingles data={data.results}/>
-            </div>
+            <nav>
+                <ul>
+                    <li id="previous">
+                        {data.previous === null ?
+                            <p>(No previous page)</p>
+                        :
+                            <p><Link href={`/${Number(pageNo) - 1}`}>Previous</Link></p>
+                        }
+                    </li>
+                    <li id="next">
+                        {data.next === null ?
+                            <p>(No following page)</p>
+                        :
+                            <p><Link href={`/${Number(pageNo) + 1}`}>Next</Link></p>
+                    }
+                    </li>
+                </ul>
+
+
+            </nav>
+            <JobSingles data={data.results}/>
         </main>
     )
 }

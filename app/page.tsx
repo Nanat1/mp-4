@@ -7,10 +7,14 @@ function Home() {
     const [pageNo, setPageNo] = useState(1);
 
     return (
-        <div>
-            Would you like to see our Job List?
-            <Link href={`/${pageNo}`}>Go</Link>
-        </div>
+        <main id="main-wrapper">
+            <main>
+                <div>
+                    <h2>Would you like to see our Job List?</h2>
+                    <Link href={`/${pageNo}`}>Go</Link>
+                </div>
+            </main>
+        </main>
     );
 }
 export default Home
