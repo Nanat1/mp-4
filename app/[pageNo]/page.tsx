@@ -1,6 +1,11 @@
 import JobList from '@/components/JobList';
 
-export default async function JobListPage({params}: {params: {pageNo: string}}) {
+interface JobListProps {
+    params: {
+        pageNo: string;
+    };
+}
+export default async function JobListPage({params}: JobListProps) {
     const pageNo = decodeURIComponent(params.pageNo);
 
     return(
