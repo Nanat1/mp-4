@@ -11,8 +11,6 @@ export default async function JobList({pageNo}: { pageNo: string }) {
     }
     const data = await fetchJobs(url);
 
-    console.log(data);
-
     if (!data) {
         return (
             <div>
