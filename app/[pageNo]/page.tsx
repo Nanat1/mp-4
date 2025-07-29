@@ -1,7 +1,7 @@
 import JobList from '@/components/JobList';
 import {Suspense} from "react";
 
-export default async function JobListPage({params}: {params: Promise<{pageNo: string}>}) {
+export default async function JobListPage({params,}: {params: Promise<{pageNo: string}>;}) {
     const pageNo = decodeURIComponent((await params).pageNo);
 
     return(
